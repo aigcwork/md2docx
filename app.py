@@ -56,6 +56,8 @@ def convert_markdown_to_docx():
         # --- 构建并执行 Pandoc 命令行指令 ---
         command = [
             'pandoc',
+            '--from', # 输入格式
+            'markdown+tex_math_dollars+tex_math_single_backslash', # 支持 LaTeX 数学公式
             input_md_path,
             '-o',
             output_docx_path,
