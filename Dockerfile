@@ -34,7 +34,7 @@ COPY requirements.txt .
 # 安装 Python 依赖包。
 # -i 使用国内的清华镜像源，可以极大地加速下载速度。
 # --no-cache-dir 表示不保存缓存，同样是为了减小镜像体积。
-RUN pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple --no-cache-dir
+RUN pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/ --no-cache-dir
 
 # -----------------------------------------------------------------------------
 # 阶段 4: 复制代码并定义启动命令
