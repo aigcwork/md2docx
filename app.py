@@ -58,7 +58,8 @@ def convert_markdown_to_docx():
             'pandoc',
             input_md_path,
             '-o',
-            output_docx_path
+            output_docx_path,
+            '--reference-doc=/app/reference.docx' #新添加的引用文档参数，参考格式，输出中文
         ]
         
         # 使用 subprocess.run 执行命令，这是更现代、更安全的方式
